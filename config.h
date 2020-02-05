@@ -70,12 +70,14 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *firefox[]  = { "firefox", NULL };
 static const char *panel[]  = { "spanel", NULL };
 static const char *flameshot[]  = { "flameshot", "gui", NULL };
+static const char *pcmanfm[]  = { "pcmanfm", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY|ControlMask,           XK_a,      spawn,          {.v = flameshot } },
+	{ MODKEY,                       XK_a,      spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = firefox } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = pcmanfm } },
 	{ MODKEY,                       XK_z,      spawn,          {.v = panel } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
