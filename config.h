@@ -69,11 +69,11 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefox[]  = { "firefox", NULL };
 static const char *panel[]  = { "spanel", NULL };
-static const char *flameshot[]  = { "flameshot", "gui"};
+static const char *flameshot[]  = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_a,      spawn,          {.v = flameshot } },
+	{ MODKEY|ControlMask,           XK_a,      spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = firefox } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_z,      spawn,          {.v = panel } },
